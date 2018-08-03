@@ -1,0 +1,16 @@
+import javax.inject.Inject;
+
+import mobi.quoine.data.app.AppDataService;
+import mobi.quoine.data.local.LocalService;
+import mobi.quoine.data.remote.NetworkService;
+import mobi.quoine.di.ActivityScope;
+import mobi.quoine.ui.base.BaseDataManager;
+
+@ActivityScope
+public class ${NAME}DataManager extends BaseDataManager {
+
+  @Inject
+  public ${NAME}DataManager(NetworkService networkService, LocalService localService, AppDataService appDataService) {
+      super(networkService, localService, appDataService);
+  }
+}

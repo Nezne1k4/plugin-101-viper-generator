@@ -1,0 +1,14 @@
+import javax.inject.Inject;
+
+import mobi.quoine.di.ActivityScope;
+import mobi.quoine.ui.base.BaseInteractor;
+
+@ActivityScope
+public class ${NAME}Interactor extends BaseInteractor<${NAME}Contracts.InteractorOutput, ${NAME}DataManager>
+        implements ${NAME}Contracts.Interactor {
+
+    @Inject
+    public ${NAME}Interactor(${NAME}DataManager dataManager) {
+        this.mDataManager = dataManager;
+    }
+}

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.your.company.unique.plugin.id</id>
     <name>VIPER classes and test generator</name>
-    <version>1.1018</version>
+    <version>1.1112</version>
     <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
     <description><![CDATA[

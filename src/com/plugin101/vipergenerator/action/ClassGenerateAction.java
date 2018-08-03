@@ -51,6 +51,12 @@ public class ClassGenerateAction extends AnAction {
 
             JavaDirectoryService.getInstance().createClass(selectedDir,
                     GeneratedClass.INSTANCE.getClassName(), template, true);
+            JavaDirectoryService.getInstance().createClass(selectedDir,
+                    GeneratedClass.INSTANCE.getClassName(), "DataManagerTemplate.java", true);
+            JavaDirectoryService.getInstance().createClass(selectedDir,
+                    GeneratedClass.INSTANCE.getClassName(), "InteractorTemplate.java", true);
+            JavaDirectoryService.getInstance().createClass(selectedDir,
+                    GeneratedClass.INSTANCE.getClassName(), "PresenterTemplate.java", true);
         }
     }
 }
