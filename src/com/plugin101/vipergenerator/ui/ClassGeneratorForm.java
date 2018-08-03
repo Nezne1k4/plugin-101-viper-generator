@@ -29,7 +29,7 @@ public class ClassGeneratorForm {
 
     private GeneratedClass generatedClass;
 
-    public ClassGeneratorForm(GeneratedClass generatedClass) {
+    public ClassGeneratorForm(final GeneratedClass generatedClass) {
         this.generatedClass = generatedClass;
         yesRadioButton.addActionListener(new ActionListener() {
             @Override

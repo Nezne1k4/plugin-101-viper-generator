@@ -45,8 +45,8 @@ public class ClassGenerateAction extends AnAction {
             if (GeneratedClass.INSTANCE.isHasPsvm()) {
                 template = "PsvmClassTemplate.java";
             } else {
-                //template = "BasicClassTemplate.java";
-                template = "ContractsClassTemplate.java";
+                template = "BasicClassTemplate.java";
+//                template = "ContractsClassTemplate.java";
             }
 
             JavaDirectoryService.getInstance().createClass(selectedDir,

@@ -1,3 +1,20 @@
-public class ${NAME} {
+import mobi.quoine.ui.base.BaseInteractorOutput;
+import mobi.quoine.ui.base.BaseView;
 
+public class ${NAME}Contracts {
+    public interface View extends BaseView {
+
+    }
+
+    public interface Presenter {
+
+    }
+
+    public interface Interactor {
+
+    }
+
+    public interface InteractorOutput extends BaseInteractorOutput {
+
+    }
 }
