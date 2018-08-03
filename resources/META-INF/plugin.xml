@@ -1,17 +1,15 @@
 <idea-plugin>
-    <id>com.your.company.unique.plugin.id</id>
-    <name>VIPER classes and test generator</name>
-    <version>1.1112</version>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>com.plugin101.demo.vipergenerator</id>
+    <name>VIPEnoR Template Classes Generator</name>
+    <version>1.1328</version>
+    <vendor email="anh.tran@whatever.com" url="http://www.whatever.com">Whatever</vendor>
 
-    <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+    <description><![CDATA[VIPEnoR makes life easier, but it takes time.
+    We have nothing but time :)
     ]]></description>
 
-    <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+    <change-notes><![CDATA[Try to make it run for demo.
+    Run! Please run!
     ]]>
     </change-notes>
 
@@ -28,18 +26,8 @@
         <!-- Add your extensions here -->
     </extensions>
 
-    <!--<actions>-->
-        <!--&lt;!&ndash; Add your actions here &ndash;&gt;-->
-        <!--<action id="ClassGenerateAction"-->
-                <!--class="com.plugin101.vipergenerator.action.ClassGenerateAction-->
-                <!--text="ClassGenerateAction"-->
-                <!--description="Viper Generator Action">-->
-            <!--<add-to-group group-id="GenerateGroup" anchor="first"/>-->
-        <!--</action>-->
-    <!--</actions>-->
-
     <actions>
-        <group id="genClassProject" text="Generate VIPER" popup="true">
+        <group id="genClassProject" text="Generate VIPEnoR" popup="true">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
             <action id="classGenerator"
                     class="com.plugin101.vipergenerator.action.ClassGenerateAction"

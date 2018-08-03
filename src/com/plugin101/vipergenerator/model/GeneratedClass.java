@@ -5,7 +5,6 @@ public class GeneratedClass {
   public static final GeneratedClass INSTANCE = new GeneratedClass();
 
   private String className;
-  private boolean hasPsvm;
 
   public String getClassName() {
     return className;
@@ -15,11 +14,4 @@ public class GeneratedClass {
     this.className = className;
   }
 
-  public boolean isHasPsvm() {
-    return hasPsvm;
-  }
-
-  public void setHasPsvm(boolean hasPsvm) {
-    this.hasPsvm = hasPsvm;
-  }
 }

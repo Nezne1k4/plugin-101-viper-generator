@@ -7,11 +7,6 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
-/**
- * Wrapper class for our {@link ClassGeneratorForm}.
- *
- * @author hrabosch
- */
 public class GenDialogWrapper extends DialogWrapper {
 
   private ClassGeneratorForm classGenForm;
@@ -20,7 +15,7 @@ public class GenDialogWrapper extends DialogWrapper {
     super(project);
     classGenForm = new ClassGeneratorForm(GeneratedClass.INSTANCE);
     init();
-    setTitle("Class generator");
+    setTitle("VIPEnoR generator");
   }
 
   @Nullable

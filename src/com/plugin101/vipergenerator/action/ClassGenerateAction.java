@@ -12,8 +12,8 @@ public class ClassGenerateAction extends AnAction {
     private PsiDirectory selectedDir;
 
     /**
-     * Method which is called during registered action event. It handles visibility of our menu action
-     * and getting selected dir from given action.
+     * Method which is called during registered action event.
+     * It handles visibility of our menu action and getting selected dir from given action.
      */
     @Override
     public void update(AnActionEvent e) {
@@ -26,13 +26,10 @@ public class ClassGenerateAction extends AnAction {
         } else {
             e.getPresentation().setEnabledAndVisible(false);
         }
-
     }
 
     /**
-     * Method which is called after performing action. It shows our custom dialog defined by {@link
-     * GenDialogWrapper} and handle given information from {@link GeneratedClass} for generating our
-     * custom class from templates.
+     * Method which is called after performing action
      */
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
@@ -40,17 +37,9 @@ public class ClassGenerateAction extends AnAction {
         dialogWrapper.show();
 
         if (dialogWrapper.isOK()) {
-
-            String template;
-            if (GeneratedClass.INSTANCE.isHasPsvm()) {
-                template = "PsvmClassTemplate.java";
-            } else {
-                template = "BasicClassTemplate.java";
-//                template = "ContractsClassTemplate.java";
-            }
-
+            // create file from template files
             JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), template, true);
+                    GeneratedClass.INSTANCE.getClassName(), "ContractsTemplate.java", true);
             JavaDirectoryService.getInstance().createClass(selectedDir,
                     GeneratedClass.INSTANCE.getClassName(), "DataManagerTemplate.java", true);
             JavaDirectoryService.getInstance().createClass(selectedDir,
