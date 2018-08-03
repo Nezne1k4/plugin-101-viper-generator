@@ -1,0 +1,25 @@
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import mobi.quoine.ui.base.BasePresenterTest;
+import mobi.quoine.util.MockErrorContext;
+
+import static org.mockito.Mockito.mock;
+
+@RunWith(MockitoJUnitRunner.class)
+public class ${NAME}PresenterTest extends BasePresenterTest<${NAME}Interactor, ${NAME}Contracts.View, ${NAME}Presenter> {
+
+    @Override
+    protected void initMocks() {
+        mInteractor = mock(${NAME}Interactor.class);
+        mMockView = mock(${NAME}Contracts.View.class);
+        mPresenter = new ${NAME}Presenter(new MockErrorContext(), mInteractor);
+    }
+
+    @Test
+    public void testSample() {
+
+    }
+
+}

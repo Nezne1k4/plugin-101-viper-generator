@@ -1,0 +1,24 @@
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import mobi.quoine.ui.base.BaseInteractorTest;
+
+import static org.mockito.Mockito.mock;
+
+@RunWith(MockitoJUnitRunner.class)
+public class ${NAME}InteractorTest extends BaseInteractorTest<${NAME}DataManager, ${NAME}Contracts.InteractorOutput, ${NAME}Interactor> {
+
+    @Override
+    protected void initMocks() {
+        mDataManager = mock(${NAME}DataManager.class);
+        mOutput = mock(${NAME}Contracts.InteractorOutput.class);
+        mInteractor = new ${NAME}Interactor(mDataManager);
+    }
+
+    @Test
+    public void testSample() {
+
+    }
+
+}

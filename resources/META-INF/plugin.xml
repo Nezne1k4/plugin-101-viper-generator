@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.plugin101.demo.vipergenerator</id>
     <name>VIPEnoR Template Classes Generator</name>
-    <version>1.1328</version>
+    <version>1.0803.1755</version>
     <vendor email="anh.tran@whatever.com" url="http://www.whatever.com">Whatever</vendor>
 
     <description><![CDATA[VIPEnoR makes life easier, but it takes time.
@@ -31,9 +31,12 @@
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
             <action id="classGenerator"
                     class="com.plugin101.vipergenerator.action.ClassGenerateAction"
-                    text="Class generator"
-                    description="UI for generating class.">
-            </action>
+                    text="Source code"
+                    description="UI for generating class."/>
+            <action id="testGenerator"
+                    class="com.plugin101.vipergenerator.action.ClassTestGenerateAction"
+                    text="Unit test"
+                    description="UI for generating class."/>
         </group>
     </actions>
 

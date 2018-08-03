@@ -6,6 +6,8 @@ public class GeneratedClass {
 
   private String className;
 
+  private boolean isUnittest = true;
+
   public String getClassName() {
     return className;
   }
@@ -14,4 +16,11 @@ public class GeneratedClass {
     this.className = className;
   }
 
+  public boolean isUnittest() {
+    return isUnittest;
+  }
+
+  public void setUnittest(boolean unittest) {
+    isUnittest = unittest;
+  }
 }
