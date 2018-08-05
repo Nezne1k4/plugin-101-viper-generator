@@ -4,7 +4,8 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.psi.*;
-import com.plugin101.vipergenerator.Constants;
+import com.plugin101.vipergenerator.common.Constants;
+import com.plugin101.vipergenerator.common.GeneratorType;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
 
@@ -37,7 +38,7 @@ public class ClassSourceGenerateAction extends AnAction {
      */
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "VIPEnoR for Gang of Four");
+        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "VIPEnoR for Gang of Four", GeneratorType.GANG_OF_FOUR);
         dialogWrapper.show();
 
         if (dialogWrapper.isOK()) {

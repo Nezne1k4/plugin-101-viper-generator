@@ -1,6 +1,7 @@
 package com.plugin101.vipergenerator.ui;
 
-import com.plugin101.vipergenerator.Constants;
+import com.plugin101.vipergenerator.common.Constants;
+import com.plugin101.vipergenerator.common.GeneratorType;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 
 import javax.swing.*;
@@ -20,9 +21,11 @@ public class ViperGeneratorForm {
     private JTextField jtfPackageMockContextTest;
     private JCheckBox jIsLibrariesChanged;
 
-    public ViperGeneratorForm(final GeneratedClass generatedClass) {
+    public ViperGeneratorForm(final GeneratedClass generatedClass, final GeneratorType genType) {
         // default disable lib
         setDefaultLibraries(generatedClass);
+        generatedClass.setIsLibByDefault(true);
+        updateLibrariesViewEditable(false, genType);
 
         jtfClassName.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -149,16 +152,13 @@ public class ViperGeneratorForm {
                 AbstractButton abstractButton =
                         (AbstractButton) changeEvent.getSource();
                 ButtonModel buttonModel = abstractButton.getModel();
-                updateLibrariesViewEditable(buttonModel.isSelected());
+                updateLibrariesViewEditable(buttonModel.isSelected(), genType);
                 generatedClass.setIsLibByDefault(!buttonModel.isSelected());
             }
         });
     }
 
     private void setDefaultLibraries(GeneratedClass generatedClass) {
-        generatedClass.setIsLibByDefault(true);
-        updateLibrariesViewEditable(false);
-
         jtfPackageBase.setText(Constants.DEFAULT_LIB_BASE);
         jtfPackageAppData.setText(Constants.DEFAULT_LIB_APP_SERVICE);
         jtfPackageLocalData.setText(Constants.DEFAULT_LIB_LOCAL_SERVICE);
@@ -167,13 +167,32 @@ public class ViperGeneratorForm {
         jtfPackageMockContextTest.setText(Constants.DEFAULT_LIB_TEST);
     }
 
-    private void updateLibrariesViewEditable(boolean selected) {
+    private void updateLibrariesViewEditable(boolean selected, GeneratorType genType) {
         jtfPackageBase.setEnabled(selected);
-        jtfPackageAppData.setEnabled(selected);
-        jtfPackageLocalData.setEnabled(selected);
-        jtfPackageRemoteData.setEnabled(selected);
-        jtfPackageDi.setEnabled(selected);
-        jtfPackageMockContextTest.setEnabled(selected);
+
+        if (genType == GeneratorType.UNIT_TEST_ONLY) {
+            jtfPackageAppData.setEnabled(false);
+            jtfPackageLocalData.setEnabled(false);
+            jtfPackageRemoteData.setEnabled(false);
+            jtfPackageDi.setEnabled(false);
+
+            jtfPackageAppData.setText("");
+            jtfPackageLocalData.setText("");
+            jtfPackageRemoteData.setText("");
+            jtfPackageDi.setText("");
+        } else {
+            jtfPackageAppData.setEnabled(selected);
+            jtfPackageLocalData.setEnabled(selected);
+            jtfPackageRemoteData.setEnabled(selected);
+            jtfPackageDi.setEnabled(selected);
+        }
+
+        if (genType == GeneratorType.GANG_OF_FOUR) {
+            jtfPackageMockContextTest.setEnabled(false);
+            jtfPackageMockContextTest.setText("");
+        } else {
+            jtfPackageMockContextTest.setEnabled(selected);
+        }
     }
 
     public JComponent getContent() {

@@ -8,7 +8,8 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.file.PsiDirectoryFactory;
-import com.plugin101.vipergenerator.Constants;
+import com.plugin101.vipergenerator.common.Constants;
+import com.plugin101.vipergenerator.common.GeneratorType;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
 
@@ -45,7 +46,7 @@ public class ClassUnittestGenerateAction extends AnAction {
      */
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "VIPEnoR UnitTest Generator");
+        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "VIPEnoR UnitTest Generator", GeneratorType.UNIT_TEST_ONLY);
         dialogWrapper.show();
         if (dialogWrapper.isOK()) {
             generateClassFile(anActionEvent, mSelectedSourceDir);

@@ -1,4 +1,4 @@
-package com.plugin101.vipergenerator;
+package com.plugin101.vipergenerator.common;
 
 public class Constants {
     public static final String PARAM_IMPORT_BASE_VIPER = "PARAM_IMPORT_BASE_VIPER";
