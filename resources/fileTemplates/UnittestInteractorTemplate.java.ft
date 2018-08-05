@@ -17,7 +17,7 @@ public class ${NAME}InteractorTest extends BaseInteractorTest<${NAME}DataManager
     }
 
     @Test
-    public void testSample() {
+    public void testOnWhatever() {
 
     }
 

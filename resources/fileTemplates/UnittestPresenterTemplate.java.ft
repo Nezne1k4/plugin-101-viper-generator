@@ -18,7 +18,7 @@ public class ${NAME}PresenterTest extends BasePresenterTest<${NAME}Interactor, $
     }
 
     @Test
-    public void testSample() {
+    public void testOnWhatever() {
 
     }
 

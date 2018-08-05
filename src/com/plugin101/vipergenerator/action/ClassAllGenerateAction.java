@@ -7,7 +7,7 @@ import com.intellij.psi.*;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
 
-public class ClassTestGenerateAction extends AnAction {
+public class ClassAllGenerateAction extends AnAction {
 
     private PsiDirectory selectedDir;
 
@@ -33,15 +33,12 @@ public class ClassTestGenerateAction extends AnAction {
      */
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject());
+        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "Gang of 4 and Unittest generator");
         dialogWrapper.show();
 
         if (dialogWrapper.isOK()) {
-            // create file from template files
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "InteractorTestTemplate.java", true);
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "PresenterTestTemplate.java", true);
+            new ClassSourceGenerateAction().generateClassFile(anActionEvent, selectedDir);
+            new ClassUnittestGenerateAction().generateClassFile(anActionEvent, selectedDir);
         }
     }
 }

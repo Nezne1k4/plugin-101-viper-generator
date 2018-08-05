@@ -7,9 +7,9 @@ import com.intellij.psi.*;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
 
-public class ClassGenerateAction extends AnAction {
+public class ClassSourceGenerateAction extends AnAction {
 
-    private PsiDirectory selectedDir;
+    private PsiDirectory mSelectedDir;
 
     /**
      * Method which is called during registered action event.
@@ -19,10 +19,10 @@ public class ClassGenerateAction extends AnAction {
     public void update(AnActionEvent e) {
         PsiElement selectedElement = CommonDataKeys.PSI_ELEMENT.getData(e.getDataContext());
         if (selectedElement instanceof PsiDirectory) {
-            selectedDir = (PsiDirectory) selectedElement;
+            mSelectedDir = (PsiDirectory) selectedElement;
         } else if (selectedElement instanceof PsiClass) {
             PsiFile psiFile = selectedElement.getContainingFile();
-            selectedDir = psiFile.getContainingDirectory();
+            mSelectedDir = psiFile.getContainingDirectory();
         } else {
             e.getPresentation().setEnabledAndVisible(false);
         }
@@ -33,19 +33,23 @@ public class ClassGenerateAction extends AnAction {
      */
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject());
+        GenDialogWrapper dialogWrapper = new GenDialogWrapper(anActionEvent.getProject(), "VIPEnoR for Gang of Four");
         dialogWrapper.show();
 
         if (dialogWrapper.isOK()) {
             // create file from template files
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "ContractsTemplate.java", true);
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "DataManagerTemplate.java", true);
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "InteractorTemplate.java", true);
-            JavaDirectoryService.getInstance().createClass(selectedDir,
-                    GeneratedClass.INSTANCE.getClassName(), "PresenterTemplate.java", true);
+            generateClassFile(anActionEvent, mSelectedDir);
         }
+    }
+
+    public void generateClassFile(AnActionEvent anActionEvent, PsiDirectory selectedDir) {
+        JavaDirectoryService.getInstance().createClass(selectedDir,
+                GeneratedClass.INSTANCE.getClassName(), "ContractsTemplate.java", true);
+        JavaDirectoryService.getInstance().createClass(selectedDir,
+                GeneratedClass.INSTANCE.getClassName(), "DataManagerTemplate.java", true);
+        JavaDirectoryService.getInstance().createClass(selectedDir,
+                GeneratedClass.INSTANCE.getClassName(), "InteractorTemplate.java", true);
+        JavaDirectoryService.getInstance().createClass(selectedDir,
+                GeneratedClass.INSTANCE.getClassName(), "PresenterTemplate.java", true);
     }
 }

@@ -11,11 +11,11 @@ public class GenDialogWrapper extends DialogWrapper {
 
   private ClassGeneratorForm classGenForm;
 
-  public GenDialogWrapper(@Nullable Project project) {
+  public GenDialogWrapper(@Nullable Project project, @Nullable String title) {
     super(project);
     classGenForm = new ClassGeneratorForm(GeneratedClass.INSTANCE);
     init();
-    setTitle("VIPEnoR generator");
+    setTitle(title == null ? "VIPEnoR generator": title);
   }
 
   @Nullable
