@@ -1,5 +1,5 @@
-import mobi.quoine.ui.base.BaseInteractorOutput;
-import mobi.quoine.ui.base.BaseView;
+import ${PARAM_IMPORT_BASE_VIPER}.BaseInteractorOutput;
+import ${PARAM_IMPORT_BASE_VIPER}.BaseView;
 
 public class ${NAME}Contracts {
     public interface View extends BaseView {

@@ -4,8 +4,12 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.psi.*;
+import com.plugin101.vipergenerator.Constants;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ClassSourceGenerateAction extends AnAction {
 
@@ -43,13 +47,25 @@ public class ClassSourceGenerateAction extends AnAction {
     }
 
     public void generateClassFile(AnActionEvent anActionEvent, PsiDirectory selectedDir) {
-        JavaDirectoryService.getInstance().createClass(selectedDir,
-                GeneratedClass.INSTANCE.getClassName(), "ContractsTemplate.java", true);
-        JavaDirectoryService.getInstance().createClass(selectedDir,
-                GeneratedClass.INSTANCE.getClassName(), "DataManagerTemplate.java", true);
-        JavaDirectoryService.getInstance().createClass(selectedDir,
-                GeneratedClass.INSTANCE.getClassName(), "InteractorTemplate.java", true);
-        JavaDirectoryService.getInstance().createClass(selectedDir,
-                GeneratedClass.INSTANCE.getClassName(), "PresenterTemplate.java", true);
+        String className = GeneratedClass.INSTANCE.getClassName();
+        if (className == null || className.isEmpty()) {
+            return;
+        }
+
+        Map<String, String> params = new HashMap<String, String>();
+        params.put(Constants.PARAM_IMPORT_BASE_VIPER, "mobi.quoine.ui.base");
+        params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, "mobi.quoine.data.app");
+        params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, "mobi.quoine.data.local");
+        params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, "mobi.quoine.data.remote");
+        params.put(Constants.PARAM_IMPORT_DI, "mobi.quoine.di");
+
+        JavaDirectoryService.getInstance().createClass(
+                selectedDir, className, "ContractsTemplate.java", true, params);
+        JavaDirectoryService.getInstance().createClass(
+                selectedDir, className, "DataManagerTemplate.java", true, params);
+        JavaDirectoryService.getInstance().createClass(
+                selectedDir, className, "InteractorTemplate.java", true, params);
+        JavaDirectoryService.getInstance().createClass(
+                selectedDir, className, "PresenterTemplate.java", true, params);
     }
 }

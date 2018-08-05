@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0362add5-d8cc-402f-a650-5e6e8efc3482" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/InteractorTestTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/PresenterTestTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassGenerateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassAllGenerateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassTestGenerateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,61 +29,96 @@
       <file leaf-file-name="ClassSourceGenerateAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="35" column="98" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="98" />
+            <state relative-caret-position="309">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+              <folding>
+                <element signature="e#1962#1978#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassAllGenerateAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassAllGenerateAction.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
+      <file leaf-file-name="JavaDirectoryService.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-api.jar!/com/intellij/psi/JavaDirectoryService.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+            <state relative-caret-position="183">
+              <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenDialogWrapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java">
+      <file leaf-file-name="ContractsTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+            <state relative-caret-position="15">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassGeneratorForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java">
+      <file leaf-file-name="DataManagerTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="30">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassGeneratorForm.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.form">
-          <provider selected="true" editor-type-id="ui-designer" />
+      <file leaf-file-name="InteractorTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassUnittestGenerateAction.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PresenterTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnittestInteractorTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnittestPresenterTemplate.java.ft" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassUnittestGenerateAction.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="44" column="117" selection-start-line="44" selection-start-column="117" selection-end-line="44" selection-end-column="117" />
+            <state relative-caret-position="353">
+              <caret line="72" column="74" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
               <folding>
-                <element signature="e#3484#3817#0" expanded="true" />
-                <element signature="e#3816#3817#0" expanded="true" />
+                <element signature="e#2682#2698#0" expanded="true" />
+                <element signature="e#4492#4825#0" expanded="true" />
+                <element signature="e#4824#4825#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +144,19 @@
       <find>getVirtualFile</find>
       <find>VIPE</find>
       <find>VIPEnoR</find>
+      <find>mobi.quoine.data.app</find>
+      <find>mobi.quoine.data.local</find>
+      <find>mobi.quoine.data.remote</find>
+      <find>PARAM_DI_PACKAGE</find>
+      <find>mobi.quoine.di</find>
+      <find>mobi.quoine.ui.base</find>
+      <find>mobi.quoine.ui.base.</find>
     </findStrings>
+    <replaceStrings>
+      <replace>${PARAM_DI_PACKAGE}</replace>
+      <replace>${${PARAM_DI_PACKAGE}}</replace>
+      <replace>${PARAM_PACKAGE_BASE}</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -114,26 +165,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ViperGeneratorAction.java" />
-        <option value="$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/BasicClassTemplate.java.ft" />
-        <option value="$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft" />
-        <option value="$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft" />
-        <option value="$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft" />
-        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/NewAction.java" />
-        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.form" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/model/GeneratedClass.java" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassGenerateAction.java" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/TestInteractorTemplate.java.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/TestPresenterTemplate.java.ft" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassTestGenerateAction.java" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassAllGenerateAction.java" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.form" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft" />
+        <option value="$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft" />
+        <option value="$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft" />
+        <option value="$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft" />
+        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/Constants.java" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft" />
         <option value="$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft" />
-        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java" />
         <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java" />
-        <option value="$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassAllGenerateAction.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
       </list>
     </option>
   </component>
@@ -145,9 +198,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="678" />
+    <option name="x" value="519" />
     <option name="y" value="23" />
-    <option name="width" value="1242" />
+    <option name="width" value="1401" />
     <option name="height" value="1015" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -316,10 +369,18 @@
       <option name="presentableId" value="Default" />
       <updated>1532856759780</updated>
     </task>
+    <task id="LOCAL-00001" summary="generate both source code classes and unittest file at test package">
+      <created>1533443111632</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1533443111632</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="678" y="23" width="1242" height="1015" extended-state="0" />
+    <frame x="519" y="23" width="1401" height="1015" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -331,12 +392,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.23965141" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3291536" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3224401" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3224401" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31083333" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22663723" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -389,6 +450,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="generate both source code classes and unittest file at test package" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate both source code classes and unittest file at test package" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -418,7 +483,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java</url>
-          <line>101</line>
+          <line>112</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -427,21 +492,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="90" lean-forward="true" selection-start-line="38" selection-start-column="90" selection-end-line="38" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-api.jar!/com/intellij/psi/JavaDirectoryService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/BasicClassTemplate.java.ft" />
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/PsvmClassTemplate.java.ft" />
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft">
       <provider selected="true" editor-type-id="text-editor" />
@@ -546,57 +596,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/BasicClassTemplate.java.ft" />
     <entry file="file://$PROJECT_DIR$/resources/fileTemplates/PsvmClassTemplate.java.ft" />
     <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/NewAction.java" />
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/model/GeneratedClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-api.jar!/com/intellij/psi/JavaDirectoryService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-api.jar!/com/intellij/psi/PsiElement.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3420">
@@ -653,17 +655,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft">
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft">
+    <entry file="file://$PROJECT_DIR$/src/ViperGen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="30">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -673,49 +675,125 @@
         <state relative-caret-position="-669" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/GenDialogWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="55" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="35" column="98" selection-start-line="35" selection-start-column="91" selection-end-line="35" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="44" column="117" selection-start-line="44" selection-start-column="117" selection-end-line="44" selection-end-column="117" />
-          <folding>
-            <element signature="e#3484#3817#0" expanded="true" />
-            <element signature="e#3816#3817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassAllGenerateAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="510">
+          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="551">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/ui/ClassGeneratorForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="initializer##0;class#ClassGeneratorForm#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/model/GeneratedClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/java-api.jar!/com/intellij/psi/JavaDirectoryService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/ContractsTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/DataManagerTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/InteractorTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/PresenterTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestInteractorTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/fileTemplates/UnittestPresenterTemplate.java.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassSourceGenerateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="e#1962#1978#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/plugin101/vipergenerator/action/ClassUnittestGenerateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="72" column="74" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+          <folding>
+            <element signature="e#2682#2698#0" expanded="true" />
+            <element signature="e#4492#4825#0" expanded="true" />
+            <element signature="e#4824#4825#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

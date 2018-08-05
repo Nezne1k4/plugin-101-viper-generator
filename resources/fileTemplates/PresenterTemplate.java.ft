@@ -2,9 +2,9 @@ import android.content.Context;
 
 import javax.inject.Inject;
 
-import mobi.quoine.di.ActivityContext;
-import mobi.quoine.di.ActivityScope;
-import mobi.quoine.ui.base.BasePresenter;
+import ${PARAM_IMPORT_DI}.ActivityContext;
+import ${PARAM_IMPORT_DI}.ActivityScope;
+import ${PARAM_IMPORT_BASE_VIPER}.BasePresenter;
 
 @ActivityScope
 public class ${NAME}Presenter extends BasePresenter<${NAME}Contracts.View, ${NAME}Interactor>

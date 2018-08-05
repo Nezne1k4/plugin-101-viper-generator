@@ -8,10 +8,13 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.file.PsiDirectoryFactory;
+import com.plugin101.vipergenerator.Constants;
 import com.plugin101.vipergenerator.model.GeneratedClass;
 import com.plugin101.vipergenerator.ui.GenDialogWrapper;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -50,6 +53,11 @@ public class ClassUnittestGenerateAction extends AnAction {
     }
 
     public void generateClassFile(AnActionEvent anActionEvent, PsiDirectory mSelectedSourceDir) {
+        String className = GeneratedClass.INSTANCE.getClassName();
+        if (className == null || className.isEmpty()) {
+            return;
+        }
+
         final String rootTestFolder = "test";
         Project project = getEventProject(anActionEvent);
         try {
@@ -59,12 +67,15 @@ public class ClassUnittestGenerateAction extends AnAction {
             }
 
             PsiDirectory testPsiDirectory = PsiDirectoryFactory.getInstance(project).createDirectory(testVirtualFile);
-
+            // more input parameters
+            Map<String, String> params = new HashMap<String, String>();
+            params.put(Constants.PARAM_IMPORT_BASE_VIPER, "mobi.quoine.ui.base");
+            params.put(Constants.PARAM_IMPORT_MOCK_TEST, "mobi.quoine.util");
             // create file from template files
             JavaDirectoryService.getInstance().createClass(testPsiDirectory,
-                    GeneratedClass.INSTANCE.getClassName(), "UnittestInteractorTemplate.java", true);
+                    className, "UnittestInteractorTemplate.java", true, params);
             JavaDirectoryService.getInstance().createClass(testPsiDirectory,
-                    GeneratedClass.INSTANCE.getClassName(), "UnittestPresenterTemplate.java", true);
+                    className, "UnittestPresenterTemplate.java", true, params);
         } catch (IOException e) {
             e.printStackTrace();
         }

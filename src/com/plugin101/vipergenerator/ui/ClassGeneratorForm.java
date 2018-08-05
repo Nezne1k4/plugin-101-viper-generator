@@ -66,7 +66,7 @@ public class ClassGeneratorForm {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null,
                         null, 0, false));
         classNameLabel = new JLabel();
-        classNameLabel.setText("Class name:");
+        classNameLabel.setText("Enter class name:");
         classNamePanel.add(classNameLabel,
                 new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE,
                         GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0,

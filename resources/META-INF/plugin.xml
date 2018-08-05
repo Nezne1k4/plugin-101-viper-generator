@@ -34,8 +34,8 @@
     </extensions>
 
     <actions>
-        <group id="genClassProject" text="VIPEnoR Boilerplate Generator" popup="true">
-            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        <group id="genClassProject" text="VIPEnoR Generator" popup="true">
+            <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewDir"/>
             <action id="classGenerator"
                     class="com.plugin101.vipergenerator.action.ClassSourceGenerateAction"
                     text="Source classes (Gang of Four)"
@@ -47,7 +47,7 @@
 
             <action id="allGenerator"
                     class="com.plugin101.vipergenerator.action.ClassAllGenerateAction"
-                    text="Gang of Four + UnitTest"
+                    text="Gang of Four w/ UnitTest"
                     description="UI for generating class."/>
         </group>
     </actions>
