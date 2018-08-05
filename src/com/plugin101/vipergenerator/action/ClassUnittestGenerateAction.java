@@ -53,7 +53,8 @@ public class ClassUnittestGenerateAction extends AnAction {
     }
 
     public void generateClassFile(AnActionEvent anActionEvent, PsiDirectory mSelectedSourceDir) {
-        String className = GeneratedClass.INSTANCE.getClassName();
+        GeneratedClass classInfo = GeneratedClass.INSTANCE;
+        String className = classInfo.getClassName();
         if (className == null || className.isEmpty()) {
             return;
         }
@@ -69,8 +70,13 @@ public class ClassUnittestGenerateAction extends AnAction {
             PsiDirectory testPsiDirectory = PsiDirectoryFactory.getInstance(project).createDirectory(testVirtualFile);
             // more input parameters
             Map<String, String> params = new HashMap<String, String>();
-            params.put(Constants.PARAM_IMPORT_BASE_VIPER, "mobi.quoine.ui.base");
-            params.put(Constants.PARAM_IMPORT_MOCK_TEST, "mobi.quoine.util");
+            if (classInfo.isLibByDefault()) {
+                params.put(Constants.PARAM_IMPORT_BASE_VIPER, Constants.DEFAULT_LIB_BASE);
+                params.put(Constants.PARAM_IMPORT_MOCK_TEST, Constants.DEFAULT_LIB_TEST);
+            } else {
+                params.put(Constants.PARAM_IMPORT_BASE_VIPER, classInfo.getImportBasePackage());
+                params.put(Constants.PARAM_IMPORT_MOCK_TEST, classInfo.getImportMockContextPackage());
+            }
             // create file from template files
             JavaDirectoryService.getInstance().createClass(testPsiDirectory,
                     className, "UnittestInteractorTemplate.java", true, params);

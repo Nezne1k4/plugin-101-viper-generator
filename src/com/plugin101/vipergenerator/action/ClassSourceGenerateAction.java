@@ -47,18 +47,26 @@ public class ClassSourceGenerateAction extends AnAction {
     }
 
     public void generateClassFile(AnActionEvent anActionEvent, PsiDirectory selectedDir) {
-        String className = GeneratedClass.INSTANCE.getClassName();
+        GeneratedClass classInfo = GeneratedClass.INSTANCE;
+        String className = classInfo.getClassName();
         if (className == null || className.isEmpty()) {
             return;
         }
 
         Map<String, String> params = new HashMap<String, String>();
-        params.put(Constants.PARAM_IMPORT_BASE_VIPER, "mobi.quoine.ui.base");
-        params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, "mobi.quoine.data.app");
-        params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, "mobi.quoine.data.local");
-        params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, "mobi.quoine.data.remote");
-        params.put(Constants.PARAM_IMPORT_DI, "mobi.quoine.di");
-
+        if (classInfo.isLibByDefault()) {
+            params.put(Constants.PARAM_IMPORT_BASE_VIPER, Constants.DEFAULT_LIB_BASE);
+            params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, Constants.DEFAULT_LIB_APP_SERVICE);
+            params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, Constants.DEFAULT_LIB_LOCAL_SERVICE);
+            params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, Constants.DEFAULT_LIB_REMOTE_SERVICE);
+            params.put(Constants.PARAM_IMPORT_DI, Constants.DEFAULT_LIB_DI);
+        } else {
+            params.put(Constants.PARAM_IMPORT_BASE_VIPER, classInfo.getImportBasePackage());
+            params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, classInfo.getImportAppDataPackage());
+            params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, classInfo.getImportLocalDataPackage());
+            params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, classInfo.getImportRemotePackage());
+            params.put(Constants.PARAM_IMPORT_DI, classInfo.getImportBasePackage());
+        }
         JavaDirectoryService.getInstance().createClass(
                 selectedDir, className, "ContractsTemplate.java", true, params);
         JavaDirectoryService.getInstance().createClass(

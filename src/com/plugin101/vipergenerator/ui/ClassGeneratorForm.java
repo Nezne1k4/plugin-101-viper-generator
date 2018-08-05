@@ -15,8 +15,13 @@ public class ClassGeneratorForm {
 
     private JPanel mainPanel;
     private JLabel classNameLabel;
+
     private JTextField classNameTextField;
     private JPanel classNamePanel;
+
+    // base
+    private JPanel packageBasePanel;
+    private JTextField packageBaseTextField;
 
     public ClassGeneratorForm(final GeneratedClass generatedClass) {
         classNameTextField.getDocument().addDocumentListener(new DocumentListener() {
@@ -58,6 +63,7 @@ public class ClassGeneratorForm {
     private void $$$setupUI$$$() {
         mainPanel = new JPanel();
         mainPanel.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
+        // class name
         classNamePanel = new JPanel();
         classNamePanel.setLayout(new GridLayoutManager(1, 3, new Insets(0, 0, 0, 0), -1, -1));
         mainPanel.add(classNamePanel,
@@ -66,13 +72,33 @@ public class ClassGeneratorForm {
                         GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null,
                         null, 0, false));
         classNameLabel = new JLabel();
-        classNameLabel.setText("Enter class name:");
+        classNameLabel.setText("Enter class name");
         classNamePanel.add(classNameLabel,
                 new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE,
                         GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0,
                         false));
         classNameTextField = new JTextField();
         classNamePanel.add(classNameTextField,
+                new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST,
+                        GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW,
+                        GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+
+        // package base
+        packageBasePanel = new JPanel();
+        packageBasePanel.setLayout(new GridLayoutManager(1, 3, new Insets(0, 0, 0, 0), -1, -1));
+        mainPanel.add(packageBasePanel,
+                new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW,
+                        GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null,
+                        null, 0, false));
+        classNameLabel = new JLabel();
+        classNameLabel.setText("Base package");
+        packageBasePanel.add(classNameLabel,
+                new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE,
+                        GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0,
+                        false));
+        packageBaseTextField = new JTextField();
+        packageBasePanel.add(packageBaseTextField,
                 new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_WEST,
                         GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW,
                         GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));

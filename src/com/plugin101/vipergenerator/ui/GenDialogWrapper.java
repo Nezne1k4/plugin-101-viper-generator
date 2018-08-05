@@ -9,19 +9,25 @@ import javax.swing.*;
 
 public class GenDialogWrapper extends DialogWrapper {
 
-  private ClassGeneratorForm classGenForm;
+    //  private ClassGeneratorForm classGenForm;
+    private ViperGeneratorForm classGenForm;
 
-  public GenDialogWrapper(@Nullable Project project, @Nullable String title) {
-    super(project);
-    classGenForm = new ClassGeneratorForm(GeneratedClass.INSTANCE);
-    init();
-    setTitle(title == null ? "VIPEnoR generator": title);
-  }
+    public GenDialogWrapper(@Nullable Project project, @Nullable String title) {
+        super(project);
+        //classGenForm = new ClassGeneratorForm(GeneratedClass.INSTANCE);
+        classGenForm = new ViperGeneratorForm(GeneratedClass.INSTANCE);
+        init();
+        setTitle(title == null ? "VIPEnoR generator" : title);
+    }
 
-  @Nullable
-  @Override
-  protected JComponent createCenterPanel() {
-    return classGenForm.getContent();
-  }
+    @Nullable
+    @Override
+    protected JComponent createCenterPanel() {
+        return classGenForm.getContent();
+    }
 
+    @Override
+    protected void dispose() {
+        super.dispose();
+    }
 }

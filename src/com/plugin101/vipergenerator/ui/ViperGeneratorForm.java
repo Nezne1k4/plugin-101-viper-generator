@@ -1,0 +1,182 @@
+package com.plugin101.vipergenerator.ui;
+
+import com.plugin101.vipergenerator.Constants;
+import com.plugin101.vipergenerator.model.GeneratedClass;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
+
+public class ViperGeneratorForm {
+    private JPanel jMainPanel;
+    private JTextField jtfClassName;
+    private JTextField jtfPackageBase;
+    private JTextField jtfPackageAppData;
+    private JTextField jtfPackageLocalData;
+    private JTextField jtfPackageRemoteData;
+    private JTextField jtfPackageDi;
+    private JTextField jtfPackageMockContextTest;
+    private JCheckBox jIsLibrariesChanged;
+
+    public ViperGeneratorForm(final GeneratedClass generatedClass) {
+        // default disable lib
+        setDefaultLibraries(generatedClass);
+
+        jtfClassName.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setClassName(jtfClassName.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setClassName(jtfClassName.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setClassName(jtfClassName.getText());
+            }
+        });
+
+        jtfPackageBase.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportBasePackage(jtfPackageBase.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportBasePackage(jtfPackageBase.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportBasePackage(jtfPackageBase.getText());
+            }
+        });
+
+        jtfPackageAppData.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportAppDataPackage(jtfPackageAppData.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportAppDataPackage(jtfPackageAppData.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportAppDataPackage(jtfPackageAppData.getText());
+            }
+        });
+
+        jtfPackageLocalData.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportLocalDataPackage(jtfPackageLocalData.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportLocalDataPackage(jtfPackageLocalData.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportLocalDataPackage(jtfPackageLocalData.getText());
+            }
+        });
+
+        jtfPackageRemoteData.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportRemotePackage(jtfPackageRemoteData.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportRemotePackage(jtfPackageRemoteData.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportRemotePackage(jtfPackageRemoteData.getText());
+            }
+        });
+
+        jtfPackageDi.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportDiPackage(jtfPackageDi.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportDiPackage(jtfPackageDi.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportDiPackage(jtfPackageDi.getText());
+            }
+        });
+
+        jtfPackageMockContextTest.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                generatedClass.setImportMockContextPackage(jtfPackageMockContextTest.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                generatedClass.setImportMockContextPackage(jtfPackageMockContextTest.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                generatedClass.setImportMockContextPackage(jtfPackageMockContextTest.getText());
+            }
+        });
+
+        jIsLibrariesChanged.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent changeEvent) {
+                AbstractButton abstractButton =
+                        (AbstractButton) changeEvent.getSource();
+                ButtonModel buttonModel = abstractButton.getModel();
+                updateLibrariesViewEditable(buttonModel.isSelected());
+                generatedClass.setIsLibByDefault(!buttonModel.isSelected());
+            }
+        });
+    }
+
+    private void setDefaultLibraries(GeneratedClass generatedClass) {
+        generatedClass.setIsLibByDefault(true);
+        updateLibrariesViewEditable(false);
+
+        jtfPackageBase.setText(Constants.DEFAULT_LIB_BASE);
+        jtfPackageAppData.setText(Constants.DEFAULT_LIB_APP_SERVICE);
+        jtfPackageLocalData.setText(Constants.DEFAULT_LIB_LOCAL_SERVICE);
+        jtfPackageRemoteData.setText(Constants.DEFAULT_LIB_REMOTE_SERVICE);
+        jtfPackageDi.setText(Constants.DEFAULT_LIB_DI);
+        jtfPackageMockContextTest.setText(Constants.DEFAULT_LIB_TEST);
+    }
+
+    private void updateLibrariesViewEditable(boolean selected) {
+        jtfPackageBase.setEnabled(selected);
+        jtfPackageAppData.setEnabled(selected);
+        jtfPackageLocalData.setEnabled(selected);
+        jtfPackageRemoteData.setEnabled(selected);
+        jtfPackageDi.setEnabled(selected);
+        jtfPackageMockContextTest.setEnabled(selected);
+    }
+
+    public JComponent getContent() {
+        return jMainPanel;
+    }
+}
