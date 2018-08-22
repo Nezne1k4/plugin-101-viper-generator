@@ -73,9 +73,15 @@ public class ClassUnittestGenerateAction extends AnAction {
             Map<String, String> params = new HashMap<String, String>();
             if (classInfo.isLibByDefault()) {
                 params.put(Constants.PARAM_IMPORT_BASE_VIPER, Constants.DEFAULT_LIB_BASE);
+                params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, Constants.DEFAULT_LIB_APP_SERVICE);
+                params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, Constants.DEFAULT_LIB_LOCAL_SERVICE);
+                params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, Constants.DEFAULT_LIB_REMOTE_SERVICE);
                 params.put(Constants.PARAM_IMPORT_MOCK_TEST, Constants.DEFAULT_LIB_TEST);
             } else {
                 params.put(Constants.PARAM_IMPORT_BASE_VIPER, classInfo.getImportBasePackage());
+                params.put(Constants.PARAM_IMPORT_APP_DATA_SERVICE, classInfo.getImportAppDataPackage());
+                params.put(Constants.PARAM_IMPORT_LOCAL_DATA_SERVICE, classInfo.getImportLocalDataPackage());
+                params.put(Constants.PARAM_IMPORT_REMOTE_DATA_SERVICE, classInfo.getImportRemotePackage());
                 params.put(Constants.PARAM_IMPORT_MOCK_TEST, classInfo.getImportMockContextPackage());
             }
             // create file from template files
@@ -83,6 +89,8 @@ public class ClassUnittestGenerateAction extends AnAction {
                     className, "UnittestInteractorTemplate.java", true, params);
             JavaDirectoryService.getInstance().createClass(testPsiDirectory,
                     className, "UnittestPresenterTemplate.java", true, params);
+            JavaDirectoryService.getInstance().createClass(testPsiDirectory,
+                    className, "UnittestDataManagerTemplate.java", true, params);
         } catch (IOException e) {
             e.printStackTrace();
         }

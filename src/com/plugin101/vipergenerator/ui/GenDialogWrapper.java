@@ -22,7 +22,8 @@ public class GenDialogWrapper extends DialogWrapper {
     @Nullable
     @Override
     protected JComponent createCenterPanel() {
-        return classGenForm.getContent();
+        JComponent jMain = classGenForm.getContent();
+        return jMain;
     }
 
     @Override

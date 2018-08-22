@@ -1,0 +1,39 @@
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import ${PARAM_IMPORT_APP_DATA_SERVICE}.AppDataService;
+import ${PARAM_IMPORT_LOCAL_DATA_SERVICE}.LocalService;
+import ${PARAM_IMPORT_REMOTE_DATA_SERVICE}.NetworkService;
+import ${PARAM_IMPORT_REMOTE_DATA_SERVICE}.pusher.PusherService;
+
+@RunWith(MockitoJUnitRunner.class)
+public class ${NAME}DataManagerTest {
+
+    ${NAME}DataManager mDataManager;
+
+    @Mock
+    NetworkService mNetworkService;
+
+    @Mock
+    LocalService mLocalService;
+
+    @Mock
+    AppDataService mAppDataService;
+
+    @Mock
+    PusherService mPusherService;
+
+    @Before
+    public void setup() {
+        mDataManager = new ${NAME}DataManager(mNetworkService, mLocalService, mAppDataService, mPusherService);
+    }
+
+    @Test
+    public void testOnWhatMatters() {
+
+    }
+
+}

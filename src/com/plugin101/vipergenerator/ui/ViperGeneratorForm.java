@@ -9,6 +9,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
+import java.awt.*;
 
 public class ViperGeneratorForm {
     private JPanel jMainPanel;
@@ -26,6 +27,8 @@ public class ViperGeneratorForm {
         setDefaultLibraries(generatedClass);
         generatedClass.setIsLibByDefault(true);
         updateLibrariesViewEditable(false, genType);
+
+        jMainPanel.setPreferredSize(new Dimension(100, 300));
 
         jtfClassName.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -169,21 +172,14 @@ public class ViperGeneratorForm {
 
     private void updateLibrariesViewEditable(boolean selected, GeneratorType genType) {
         jtfPackageBase.setEnabled(selected);
+        jtfPackageAppData.setEnabled(selected);
+        jtfPackageLocalData.setEnabled(selected);
+        jtfPackageRemoteData.setEnabled(selected);
 
         if (genType == GeneratorType.UNIT_TEST_ONLY) {
-            jtfPackageAppData.setEnabled(false);
-            jtfPackageLocalData.setEnabled(false);
-            jtfPackageRemoteData.setEnabled(false);
             jtfPackageDi.setEnabled(false);
-
-            jtfPackageAppData.setText("");
-            jtfPackageLocalData.setText("");
-            jtfPackageRemoteData.setText("");
             jtfPackageDi.setText("");
         } else {
-            jtfPackageAppData.setEnabled(selected);
-            jtfPackageLocalData.setEnabled(selected);
-            jtfPackageRemoteData.setEnabled(selected);
             jtfPackageDi.setEnabled(selected);
         }
 

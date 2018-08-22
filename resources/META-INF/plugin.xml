@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.plugin101.demo.vipergenerator</id>
     <name>VIPEnoR Boilerplate Generator</name>
-    <version>1.0805.1000</version>
+    <version>1.0822.0930</version>
     <vendor email="anh.tran@whatever.com" url="http://www.whatever.com">Whatever</vendor>
 
     <description><![CDATA[
@@ -13,6 +13,8 @@
     ]]></description>
 
     <change-notes><![CDATA[
+    v1.0822.0930: <br/>
+        - Add DataManagerTest<br/><br/>
     v1.0805.1000: <br/>
         - Generate both Gang of 4 classes and UnitTest<br/>
         - Able to change imported libraries<br/><br/>
@@ -22,7 +24,8 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <!--<idea-version since-build="173.0"/>-->
+    <idea-version since-build="141"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

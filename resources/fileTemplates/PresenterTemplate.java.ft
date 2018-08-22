@@ -16,4 +16,9 @@ public class ${NAME}Presenter extends BasePresenter<${NAME}Contracts.View, ${NAM
         this.mInteractor = interactor;
         this.mInteractor.attachOutput(this);
     }
+
+    @Override
+    public void handleNetworkStateChange(boolean isConnected) {
+        // TODO: handle network state change
+    }
 }

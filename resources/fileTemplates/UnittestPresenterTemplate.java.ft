@@ -1,6 +1,6 @@
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import ${PARAM_IMPORT_BASE_VIPER}.BasePresenterTest;
 import ${PARAM_IMPORT_MOCK_TEST}.MockErrorContext;
@@ -18,7 +18,7 @@ public class ${NAME}PresenterTest extends BasePresenterTest<${NAME}Interactor, $
     }
 
     @Test
-    public void testOnWhatever() {
+    public void testOnWhatMatters() {
 
     }
 
