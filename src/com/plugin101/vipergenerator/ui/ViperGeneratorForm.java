@@ -172,14 +172,21 @@ public class ViperGeneratorForm {
 
     private void updateLibrariesViewEditable(boolean selected, GeneratorType genType) {
         jtfPackageBase.setEnabled(selected);
-        jtfPackageAppData.setEnabled(selected);
-        jtfPackageLocalData.setEnabled(selected);
-        jtfPackageRemoteData.setEnabled(selected);
 
         if (genType == GeneratorType.UNIT_TEST_ONLY) {
+            jtfPackageAppData.setEnabled(false);
+            jtfPackageLocalData.setEnabled(false);
+            jtfPackageRemoteData.setEnabled(false);
             jtfPackageDi.setEnabled(false);
+
+            jtfPackageAppData.setText("");
+            jtfPackageLocalData.setText("");
+            jtfPackageRemoteData.setText("");
             jtfPackageDi.setText("");
         } else {
+            jtfPackageAppData.setEnabled(selected);
+            jtfPackageLocalData.setEnabled(selected);
+            jtfPackageRemoteData.setEnabled(selected);
             jtfPackageDi.setEnabled(selected);
         }
 

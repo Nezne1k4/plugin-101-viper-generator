@@ -3,18 +3,17 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import ${PARAM_IMPORT_BASE_VIPER}.BasePresenterTest;
-import ${PARAM_IMPORT_MOCK_TEST}.MockErrorContext;
 
 import static org.mockito.Mockito.mock;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class ${NAME}PresenterTest extends BasePresenterTest<${NAME}Interactor, ${NAME}Contracts.View, ${NAME}Presenter> {
 
     @Override
     protected void initMocks() {
         mInteractor = mock(${NAME}Interactor.class);
         mMockView = mock(${NAME}Contracts.View.class);
-        mPresenter = new ${NAME}Presenter(new MockErrorContext(), mInteractor);
+        mPresenter = new ${NAME}Presenter(mMockErrorContext, mInteractor);
     }
 
     @Test
